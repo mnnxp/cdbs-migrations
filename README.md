@@ -23,3 +23,9 @@ docker-compose down -v && docker-compose up -d --build
 # View logs
 docker-compose logs -f
 ```
+
+## License
+
+This project is licensed under the **PostgreSQL License**.
+
+See the [LICENSE](LICENSE) file for details.
