@@ -1,0 +1,36 @@
+FROM postgres:17.11-alpine3.24
+
+COPY ./migrations/00000000000000_diesel_initial_setup/up.sql /docker-entrypoint-initdb.d/000_diesel_initial_setup.sql
+COPY ./migrations/2021-06-29-100553_company/up.sql /docker-entrypoint-initdb.d/001_company.sql
+COPY ./migrations/2021-06-29-100605_component/up.sql /docker-entrypoint-initdb.d/002_component.sql
+COPY ./migrations/2021-06-29-100610_license/up.sql /docker-entrypoint-initdb.d/003_license.sql
+COPY ./migrations/2021-06-29-100613_standard/up.sql /docker-entrypoint-initdb.d/004_standard.sql
+COPY ./migrations/2021-06-29-100614_service/up.sql /docker-entrypoint-initdb.d/005_service.sql
+COPY ./migrations/2021-06-29-100618_user/up.sql /docker-entrypoint-initdb.d/006_user.sql
+COPY ./migrations/2021-06-29-100624_discussion/up.sql /docker-entrypoint-initdb.d/007_discussion.sql
+COPY ./migrations/2021-06-29-100628_notification/up.sql /docker-entrypoint-initdb.d/008_notification.sql
+COPY ./migrations/2021-06-29-101119_ref_table/up.sql /docker-entrypoint-initdb.d/009_ref_table.sql
+COPY ./migrations/2021-06-29-110144_company_data/up.sql /docker-entrypoint-initdb.d/010_company_data.sql
+COPY ./migrations/2021-06-29-110206_component_data/up.sql /docker-entrypoint-initdb.d/011_component_data.sql
+COPY ./migrations/2021-06-29-110210_license_data/up.sql /docker-entrypoint-initdb.d/012_license_data.sql
+COPY ./migrations/2021-06-29-110212_standard_data/up.sql /docker-entrypoint-initdb.d/013_standard_data.sql
+COPY ./migrations/2021-06-29-110215_service_data/up.sql /docker-entrypoint-initdb.d/014_service_data.sql
+COPY ./migrations/2021-06-29-110234_user_data/up.sql /docker-entrypoint-initdb.d/015_user_data.sql
+COPY ./migrations/2021-06-29-110237_discussion_data/up.sql /docker-entrypoint-initdb.d/016_discussion_data.sql
+COPY ./migrations/2021-06-29-110239_notification_data/up.sql /docker-entrypoint-initdb.d/017_notification_data.sql
+COPY ./migrations/2021-06-29-110243_ref_table_data/up.sql /docker-entrypoint-initdb.d/018_ref_table_data.sql
+COPY ./migrations/2021-06-29-110245_file_ref_data/up.sql /docker-entrypoint-initdb.d/019_file_ref_data.sql
+COPY ./migrations/2021-06-29-120256_spec_ref_data/up.sql /docker-entrypoint-initdb.d/020_spec_ref_data.sql
+COPY ./migrations/2021-06-29-120257_spec_translate_en_data/up.sql /docker-entrypoint-initdb.d/021_spec_translate_en.sql
+COPY ./migrations/2021-06-29-120258_spec_translate_ru_data/up.sql /docker-entrypoint-initdb.d/022_spec_translate_ru.sql
+COPY ./migrations/2021-06-29-120259_spec_translate_zh_data/up.sql /docker-entrypoint-initdb.d/023_spec_translate_zh.sql
+COPY ./migrations/2021-06-29-125245_company_alter/up.sql /docker-entrypoint-initdb.d/024_company_alter.sql
+COPY ./migrations/2021-06-29-125255_component_alter/up.sql /docker-entrypoint-initdb.d/025_component_alter.sql
+COPY ./migrations/2021-06-29-125270_license_alter/up.sql /docker-entrypoint-initdb.d/026_license_alter.sql
+COPY ./migrations/2021-06-29-125303_standard_alter/up.sql /docker-entrypoint-initdb.d/027_standard_alter.sql
+COPY ./migrations/2021-06-29-125304_service_alter/up.sql /docker-entrypoint-initdb.d/028_service_alter.sql
+COPY ./migrations/2021-06-29-125310_user_alter/up.sql /docker-entrypoint-initdb.d/029_user_alter.sql
+COPY ./migrations/2021-06-29-125320_discussion_alter/up.sql /docker-entrypoint-initdb.d/030_discussion_alter.sql
+COPY ./migrations/2021-06-29-125325_notification_alter/up.sql /docker-entrypoint-initdb.d/031_notification_alter.sql
+COPY ./migrations/2021-06-29-125346_ref_table_alter/up.sql /docker-entrypoint-initdb.d/032_ref_table_alter.sql
+COPY ./migrations/2021-06-29-125556_triggers/up.sql /docker-entrypoint-initdb.d/033_triggers.sql

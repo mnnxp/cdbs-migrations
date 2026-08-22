@@ -1,0 +1,3 @@
+ALTER TABLE discussion_comment_list ADD CONSTRAINT discussion_comment_list_fk0 FOREIGN KEY (discussion_uuid) REFERENCES discussion_ref(uuid) ON DELETE CASCADE;
+ALTER TABLE discussion_comment_list ADD CONSTRAINT discussion_comment_list_fk1 FOREIGN KEY (parent_comment_uuid) REFERENCES discussion_comment_list(uuid) ON DELETE CASCADE;
+ALTER TABLE discussion_comment_list ADD CONSTRAINT discussion_comment_list_fk2 FOREIGN KEY (author_uuid) REFERENCES user_ref(uuid) ON DELETE CASCADE;
