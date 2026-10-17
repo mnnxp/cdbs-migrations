@@ -10,7 +10,8 @@ CREATE TABLE extension_ref (
   id SERIAL, /* Mapping ID */
   extension VARCHAR(50) NOT NULL, /* File extension, one extension can belong to multiple programs */
   program_id INTEGER NOT NULL, /* Corresponding program (CAD) */
-  CONSTRAINT extension_ref_pk PRIMARY KEY (id)
+  CONSTRAINT extension_ref_pk PRIMARY KEY (id),
+  CONSTRAINT extension_ref_extension_program_id_key UNIQUE (extension, program_id)
 );
 
 /* File information */
