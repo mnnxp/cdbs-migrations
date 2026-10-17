@@ -1,6 +1,6 @@
 ALTER TABLE user_ref ADD CONSTRAINT user_ref_fk0 FOREIGN KEY (image_file_uuid) REFERENCES file_ref(uuid) ON DELETE CASCADE;
 ALTER TABLE user_ref ADD CONSTRAINT user_ref_fk1 FOREIGN KEY (region_id) REFERENCES region_ref(id) ON DELETE CASCADE;
-ALTER TABLE user_ref ADD CONSTRAINT user_ref_fk2 FOREIGN KEY (program_id) REFERENCES program_ref(id) ON DELETE CASCADE;
+ALTER TABLE user_ref ADD CONSTRAINT user_ref_fk2 FOREIGN KEY (program_id) REFERENCES program_ref(id);
 ALTER TABLE user_ref ADD CONSTRAINT user_ref_fk3 FOREIGN KEY (type_access_id) REFERENCES type_access_ref(id) ON DELETE CASCADE;
 
 ALTER TABLE user_token_ref ADD CONSTRAINT user_token_ref_fk0 FOREIGN KEY (user_uuid) REFERENCES user_ref(uuid) ON DELETE CASCADE;

@@ -1,4 +1,4 @@
-ALTER TABLE extension_ref ADD CONSTRAINT extension_ref_fk0 FOREIGN KEY (program_id) REFERENCES program_ref(id) ON DELETE CASCADE;
+ALTER TABLE extension_ref ADD CONSTRAINT extension_ref_fk0 FOREIGN KEY (program_id) REFERENCES program_ref(id);
 
 ALTER TABLE file_ref ADD CONSTRAINT file_ref_fk0 FOREIGN KEY (parent_file_uuid) REFERENCES file_ref(uuid) ON DELETE CASCADE;
 ALTER TABLE file_ref ADD CONSTRAINT file_ref_fk1 FOREIGN KEY (user_uuid) REFERENCES user_ref(uuid) ON DELETE CASCADE;
