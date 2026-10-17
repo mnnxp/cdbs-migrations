@@ -50,7 +50,7 @@ CREATE INDEX idx_user_api_key_ref_user_uuid ON user_api_key_ref(user_uuid);
 
 /* User data change record */
 CREATE TABLE user_history_list (
-  id SERIAL UNIQUE, /* Event ID */
+  id SERIAL, /* Event ID */
   user_uuid UUID NOT NULL, /* Profile ID related to the change */
   type_of_change_id INTEGER NOT NULL, /* Change ID (type of change) */
   old_data TEXT NOT NULL, /* Updated data */
