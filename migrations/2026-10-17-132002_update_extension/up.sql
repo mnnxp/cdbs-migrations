@@ -14,6 +14,9 @@ ALTER TABLE fileset_for_program
 -- extension_ref was only used in tests; reset all file bindings to Unknown (id = 1)
 UPDATE file_ref SET id_ext = 1 WHERE id_ext > 1;
 
+-- Add new format
+INSERT INTO program_ref (name) VALUES ('3MF') ON CONFLICT (name) DO NOTHING;
+
 -- Keep only the Unknown row (id = 1)
 DELETE FROM extension_ref WHERE id > 1;
 

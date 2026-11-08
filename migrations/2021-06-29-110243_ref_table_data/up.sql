@@ -54,7 +54,8 @@ INSERT INTO program_ref (name) VALUES
   ('Blender'),
   ('GCODE'),
   ('CypCut'),
-  ('GLTF');
+  ('GLTF'),
+  ('3MF');
 
 INSERT INTO extension_ref (extension, program_id) VALUES
   ('unknown',1),
