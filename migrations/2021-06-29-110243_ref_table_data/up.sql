@@ -54,74 +54,77 @@ INSERT INTO program_ref (name) VALUES
   ('Blender'),
   ('GCODE'),
   ('CypCut'),
-  ('GLTF');
+  ('GLTF'),
+  ('3MF');
 
-INSERT INTO extension_ref (extension,program_id) VALUES
-  ('.apng',2),
-  ('.avif',2),
-  ('.gif',2),
-  ('.jpg',2),
-  ('.jpeg',2),
-  ('.jfif',2),
-  ('.pjpeg',2),
-  ('.pjp ',2),
-  ('.png',2),
-  ('.svg',2),
-  ('.webp',2),
-  ('.bmp',2),
-  ('.ico',2),
-  ('.cur',2),
-  ('.tif',2),
-  ('.tiff',2),
-  ('.3dm',3),
-  ('.3ds',3),
-  ('.a2c',4),
-  ('.apt',4),
-  ('.asm',5),
-  ('.asm',6),
-  ('.asm',7),
-  ('.asp',8),
-  ('.asp',9),
-  ('.ccd',9),
-  ('.cdd',10),
-  ('.cdw',11),
-  ('.cdw',12),
-  ('.cpp',13),
-  ('.cr2',3),
-  ('.dgn',3),
-  ('.dtd',3),
-  ('.dwg',3),
-  ('.dwg',3),
-  ('.dxf',3),
-  ('.ics',3),
-  ('.igs',3),
-  ('.igs',3),
-  ('.iso',3),
-  ('.iso',3),
-  ('.ma',3),
-  ('.max',3),
-  ('.max',3),
-  ('.mb',3),
-  ('.mod',3),
-  ('.mod',3),
-  ('.mod',3),
-  ('.mod',3),
-  ('.mts',3),
-  ('.obj',3),
-  ('.part',3),
-  ('.pkg',3),
-  ('.prj',3),
-  ('.pwi',3),
-  ('.rnd',3),
-  ('.sldasm',3),
-  ('.sldprt',3),
-  ('.stl',3),
-  ('.vcd',3),
-  ('.vob',3),
-  ('.wm',3),
-  ('.wm2d',3),
-  ('.pdf',1),
-  ('.zip',1);
+INSERT INTO extension_ref (extension, program_id) VALUES
+  ('unknown',1),
+  -- IFC (BIM)
+  ('ifc',1), ('ifczip',1), ('ifcxml',1),
+  -- STEP
+  ('step',1), ('stp',1), ('stpz',1),
+  -- STL
+  ('stl',1),
+  -- OBJ
+  ('obj',1), ('mtl',1),
+  -- GLTF/GLB
+  ('gltf',1), ('glb',1),
+  -- COLLADA
+  ('dae',1),
+  -- GCODE
+  ('gcode',1), ('nc',1), ('tap',1), ('ncc',1), ('cnc',1),
+  -- OFF (Object File Format)
+  ('off',1),
+  -- DWG/DXF
+  ('dwg',1), ('dxf',1),
+  -- Other
+  ('pdf',1), ('zip',1), ('7z',1), ('rar',1),
+  ('igs',1), ('iges',1), -- IGES
+  ('x_t',1), ('x_b',1),  -- Parasolid
+  -- Image viewer
+  ('apng',2), ('avif',2), ('gif',2), ('jpg',2), ('jpeg',2), ('jfif',2), ('png',2), ('svg',2), ('webp',2),
+  -- AutoCAD
+  ('dwg',3), ('dxf',3), ('dwt',3), ('dws',3),
+  -- BricsCAD
+  ('dwg',4), ('dxf',4), ('a2c',4), ('apt',4),
+  -- CATIA
+  ('catpart',5), ('catproduct',5), ('cgr',5), ('3dxml',5),
+  -- nanoCAD
+  ('dwg',6), ('dxf',6),
+  -- Creo
+  ('prt',8), ('asm',8), ('drw',8), ('frm',8), ('sec',8),
+  -- DraftSight
+  ('dwg',10), ('dxf',10),
+  -- KiCad
+  ('kicad_pcb',14), ('kicad_sch',14), ('kicad_pro',14),
+  -- GstarCAD
+  ('dwg',15), ('dxf',15),
+  -- Inventor
+  ('ipt',19), ('iam',19), ('idw',19), ('ipn',19),
+  -- КОМПАС-3D
+  ('cdw',22), ('frw',22), ('a3d',22), ('m3d',22), ('spw',22), ('kdw',22), ('t3d',22),
+  -- Maya
+  ('ma',27), ('mb',27),
+  -- Revit
+  ('rvt',30), ('rfa',30), ('rte',30),
+  -- SketchUp
+  ('skp',31),
+  -- Solid Edge
+  ('par',32), ('asm',32), ('psm',32), ('dft',32),
+  -- SOLIDWORKS
+  ('sldprt',33), ('sldasm',33), ('slddrw',33),
+  -- FreeCAD
+  ('fcstd',42),
+  -- ZWCAD
+  ('dwg',50), ('dxf',50),
+  -- ZW3D
+  ('z3',51),
+  -- SolveSpace
+  ('slvs',52),
+  -- Blender
+  ('blend',53),
+  -- CypCut
+  ('cyp',55);
 
 INSERT INTO commit_ref (uuid, commit_msg) VALUES
   ('661d9005-a1bc-452f-baa5-5b64be5a60bb', '');

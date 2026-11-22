@@ -1,0 +1,2 @@
+-- Data migration: extension_ref was only used in tests.
+-- No automatic rollback; restore from backup if needed.

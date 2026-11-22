@@ -1,16 +1,17 @@
 /* List of CAD and other programs */
 CREATE TABLE program_ref (
-  id SERIAL UNIQUE, /* Software name ID */
+  id SERIAL, /* Software name ID */
   name VARCHAR(225) NOT NULL UNIQUE, /* CAD name (program name) */
   CONSTRAINT program_ref_pk PRIMARY KEY (id)
 );
 
 /* Table mapping programs to file extensions */
 CREATE TABLE extension_ref (
-  id SERIAL UNIQUE, /* Mapping ID */
+  id SERIAL, /* Mapping ID */
   extension VARCHAR(50) NOT NULL, /* File extension, one extension can belong to multiple programs */
   program_id INTEGER NOT NULL, /* Corresponding program (CAD) */
-  CONSTRAINT extension_ref_pk PRIMARY KEY (id)
+  CONSTRAINT extension_ref_pk PRIMARY KEY (id),
+  CONSTRAINT extension_ref_extension_program_id_key UNIQUE (extension, program_id)
 );
 
 /* File information */
@@ -72,7 +73,7 @@ CREATE TABLE type_access_translate_list (
 
 /* Translation languages */
 CREATE TABLE language_ref (
-  id SERIAL UNIQUE, /* Language ID */
+  id SERIAL, /* Language ID */
   lang VARCHAR(100) NOT NULL UNIQUE, /* Full language name */
   langshort VARCHAR(10) NOT NULL UNIQUE, /* Short language name */
   CONSTRAINT language_ref_pk PRIMARY KEY (id)
@@ -143,7 +144,7 @@ CREATE TABLE spec_translate_list (
 
 /* Keywords (tagging) */
 CREATE TABLE keyword_ref (
-  id SERIAL UNIQUE, /* Tag ID */
+  id SERIAL, /* Tag ID */
   keyword VARCHAR(50) NOT NULL UNIQUE, /* Keyword */
   CONSTRAINT keyword_ref_pk PRIMARY KEY (id)
 );

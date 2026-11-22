@@ -18,7 +18,7 @@ CREATE TABLE component_ref (
 
 /* Record of component data changes */
 CREATE TABLE component_history_list (
-  id SERIAL UNIQUE, /* Event ID */
+  id SERIAL, /* Event ID */
   component_uuid UUID NOT NULL, /* Standard ID related to the change */
   type_of_change_id INTEGER NOT NULL, /* Change ID (type of change) */
   user_uuid UUID NOT NULL, /* Profile ID related to the change */
